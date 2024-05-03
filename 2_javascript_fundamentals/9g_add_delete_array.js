@@ -1,18 +1,18 @@
-const a=[0,1,2,3,4];
+const a = [0, 1, 2, 3, 4];
 
 delete a[4];
-console.log(a)
+console.log(a);
 // [ 0, 1, 2, 3, <1 empty item> ]
 
 delete a[4];
-console.log(a)
+console.log(a);
 // [ 0, 1, 2, 3, <1 empty item> ] Nothing happens actually
 
 delete a[3];
-console.log(a)
+console.log(a);
 // [ 0, 1, 2, <2 empty items> ]
 
-console.log(a[3]) //undefined
+console.log(a[3]); //undefined
 
 a[100] = 100;
 console.log(a);
@@ -23,6 +23,12 @@ console.log(a.length); //101
 console.clear();
 //SPLICE -> add elle into the array array.splice(startIndex, how_many_ele_u_wanna_remove)
 console.log(a); // [ 0, 1, 2, <97 empty items>, 100 ]
-a.splice(0,2); //remove 2 ele from position 0
+a.splice(0, 2); //remove 2 ele from position 0
 console.log(a); // [ 2, <97 empty items>, 100 ]
 
+console.clear();
+const ar = [1, 2, 3]; //[ 1, 2, 3 ]
+for (let i = 0; i < 5; i++) {
+  ar.splice(3, 0, i); //add i to the 3rd position, remove 0 elements
+}
+console.log(ar); //op [1, 2, 3, 4, 3, 2, 1, 0 ]
